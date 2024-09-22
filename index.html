@@ -7,6 +7,13 @@
   
     <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/vintage-valentine" rel="stylesheet">
+                
     <title>Envio para Russell! </title>
     <style>
       *,
@@ -85,8 +92,8 @@ body {
         border-radius: 20px;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra en el texto */
         backdrop-filter: blur(10px); /* Difumina el fondo detrás del texto */
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold;
+        /* font-family: 'Roboto', sans-serif; */
+        /* font-weight: bold; */
         letter-spacing: 2px;
         color: #fff; /* Color blanco para el texto */
         text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra en el texto */
@@ -1735,11 +1742,11 @@ h1 {
       /* Texto sin borde */
       .bubble-text {
         color: white; /* Color del texto */
-        font-size: 15px;
+        
         padding: 1em 2em;
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
        
-        font-family: sans-serif;
+        
         letter-spacing: 0.1em;
         text-align: center;
         position: relative;
@@ -1752,13 +1759,13 @@ h1 {
         position: absolute;
         width: 25%;
         height: 100%;
-        background-color: rgba(255, 255, 255, 0.4); /* Burbuja blanca translúcida */
-        transform: translateY(150%);
-        border-radius: 50%;
-        left: calc((var(--n) - 1) * 25%);
-        animation: moveBubbles 3s infinite ease-in-out; /* Reducido a 3s para mayor velocidad */
-        z-index: -1;
-        filter: blur(20px); /* Efecto difuminado */
+        background-color: rgba(255, 255, 255, 0.811); /* Burbujas más opacas */
+      transform: translateY(150%);
+      border-radius: 50%;
+      left: calc((var(--n) - 1) * 25%);
+      animation: moveBubbles 4s infinite ease-in-out; /* Animación ligeramente más lenta para suavizar */
+      z-index: -1;
+      filter: blur(20px); /* Aumentar el desenfoque para hacerlas más suaves */
       }
   
       /* Animación de las burbujas */
@@ -1779,25 +1786,42 @@ h1 {
   
       .bubble-text span:nth-child(2) {
         --n: 2;
-        animation-delay: 1s;
+        animation-delay: 0.5s;
       }
   
       .bubble-text span:nth-child(3) {
         --n: 3;
-        animation-delay: 2s;
+        animation-delay: 1s;
       }
   
       .bubble-text span:nth-child(4) {
         --n: 4;
-        animation-delay: 3s;
+        animation-delay: 2s;
       }
+    </style>
+    <style>
+      #sacramento-regular {
+  font-family: "Sacramento", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+#patuaregular {
+  font-size: 17px;
+  /* font-family: "Patua One", serif; */
+  font-weight: 400;
+  font-style: normal;
+  
+  font-family: 'Vintage Valentine', sans-serif;
+}
+
+
     </style>
   </head>
   <body class="container">
     <div id="loadingScreen">
       <!-- <p class="bubble-text">Envío para Russell</p> -->
       <!-- <p class="contenttext">Envío para Russell</p> -->
-      <p class="bubble-text">
+      <p class="bubble-text" id="patuaregular">
         Envío pendiente para la pequeña Russell..<br> 📦📦
         <!-- <i class="em em-soon" style="font-size: medium;" ></i> -->
    
@@ -1808,7 +1832,7 @@ h1 {
     </div>
     
     <div id="content">
-    <h1 class="titulo">
+    <h1 class="titulo" id="sacramento-regular" style="margin-top: 20%;" >
       Pequeñas flores a la distancia para esta mujercita tan bonita.<br>
        Para ti mi pequeña hermosa ❤️</h1>
   
