@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+
     <title>Envio para Russell! </title>
     <style>
       *,
@@ -32,15 +35,16 @@ body {
   overflow: hidden;
 }
 
+
   /* Pantalla de carga */
-  #loadingScreen {
+  /* #loadingScreen {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         background: url('https://i.postimg.cc/23pJZkP8/ac7cf93f-34f6-45d7-8e9b-b059fb64ef43.jpg') no-repeat center center;
-        background-size: auto 100%; /* Asegura que el alto sea 100% y el ancho se ajuste */
+        background-size: auto 100%; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -52,10 +56,62 @@ body {
       }
 
       #loadingScreen p {
-        background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para el texto */
+        background-color: rgba(0, 0, 0, 0.5); 
         padding: 10px;
         border-radius: 10px;
+      } */
+  /* Pantalla de carga */
+  #loadingScreen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('https://i.postimg.cc/23pJZkP8/ac7cf93f-34f6-45d7-8e9b-b059fb64ef43.jpg') no-repeat center center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Alinea el contenido en la parte superior */
+        padding-top: 10vh; /* Posiciona el contenido en el primer tercio */
+        z-index: 100;
+        text-align: center;
+      
       }
+
+      /* Estilos del texto */
+      #loadingScreen p {
+        background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente suave */
+        padding: 20px 30px;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra en el texto */
+        backdrop-filter: blur(10px); /* Difumina el fondo detrás del texto */
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: #fff; /* Color blanco para el texto */
+        text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra en el texto */
+        width: 65%; /* El texto ocupa el 50% del ancho de la pantalla */
+        margin: 0 auto;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transiciones suaves */
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Efecto hover suave (opcional si quieres interacción) */
+      #loadingScreen p:hover {
+        transform: translateY(-5px);
+        opacity: 0.9;
+      }
+
+      #contenttext {
+text-align: left; 
+font-family: Arial Black; 
+font-weight: bold; 
+font-size: 30px; 
+color: #fff; 
+text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
 
 #content {
         display: none; /* Ocultar contenido inicial */
@@ -1674,11 +1730,83 @@ h1 {
 
 
     </style>
+     <style>
+    
+      /* Texto sin borde */
+      .bubble-text {
+        color: white; /* Color del texto */
+        font-size: 15px;
+        padding: 1em 2em;
+        text-transform: uppercase;
+       
+        font-family: sans-serif;
+        letter-spacing: 0.1em;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+  
+      /* Burbujas blancas difuminadas */
+      .bubble-text span {
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.4); /* Burbuja blanca translúcida */
+        transform: translateY(150%);
+        border-radius: 50%;
+        left: calc((var(--n) - 1) * 25%);
+        animation: moveBubbles 3s infinite ease-in-out; /* Reducido a 3s para mayor velocidad */
+        z-index: -1;
+        filter: blur(20px); /* Efecto difuminado */
+      }
+  
+      /* Animación de las burbujas */
+      @keyframes moveBubbles {
+        0%, 100% {
+          transform: translateY(150%) scale(1);
+        }
+        50% {
+          transform: translateY(0) scale(2);
+        }
+      }
+  
+      /* Asignar diferentes delays a cada burbuja para que se muevan en tiempos diferentes */
+      .bubble-text span:nth-child(1) {
+        --n: 1;
+        animation-delay: 0s;
+      }
+  
+      .bubble-text span:nth-child(2) {
+        --n: 2;
+        animation-delay: 1s;
+      }
+  
+      .bubble-text span:nth-child(3) {
+        --n: 3;
+        animation-delay: 2s;
+      }
+  
+      .bubble-text span:nth-child(4) {
+        --n: 4;
+        animation-delay: 3s;
+      }
+    </style>
   </head>
   <body class="container">
     <div id="loadingScreen">
-      <p>Envío para Russell</p>
+      <!-- <p class="bubble-text">Envío para Russell</p> -->
+      <!-- <p class="contenttext">Envío para Russell</p> -->
+      <p class="bubble-text">
+        Envío pendiente para la pequeña Russell..<br> 📦📦
+        <!-- <i class="em em-soon" style="font-size: medium;" ></i> -->
+   
+        <!-- <i class="fa-solid fa-envelope"></i>
+        <i class="fa-solid fa-location-arrow"></i> -->
+        <span></span><span></span><span></span><span></span>
+      </p>
     </div>
+    
     <div id="content">
     <h1 class="titulo">
       Pequeñas flores a la distancia para esta mujercita tan bonita.<br>
